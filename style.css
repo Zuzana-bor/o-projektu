@@ -62,7 +62,6 @@ h2
   font-size: 30px;
   font-family: 'Playfair Display', serif;
   text-align: center;
-  font-style: italic;
   color:whitesmoke;
   text-shadow:0 3px 10px rgba(0, 0, 0, 0.7)
 }
@@ -73,4 +72,11 @@ h2
   padding: 100px 20px; background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+section 
+{
+  padding:30px 15%;
+  overflow:auto;
+  text-align:justify;
 }
