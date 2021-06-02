@@ -90,27 +90,21 @@ section {
 .conteiner {
   display: flex;
 }
-
 .histories {
-  border: 2px solid black;
-  margin: 3px;
   display: flex;
   flex-direction: column;
-  padding: 0;
-
-  flex-shrink: 0;
-}
-.history {
   border: 2px solid black;
-  display: flex;
   width: 30%;
-  height: 150px;
-  margin-right: auto;
+  padding: 5px;
+}
+
+.history {
+  display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0;
+  border: 2px solid black;
+  align-items: start;
+
   position: relative;
-  flex-shrink: 0;
 }
 
 #date {
@@ -118,11 +112,11 @@ section {
   border-radius: 45%;
   background-color: lightgreen;
   padding: 5px;
-  font-size: 35px;
+  font-size: 20px;
 }
 
 #name {
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
   margin-right: 50px;
 }
 
@@ -130,4 +124,25 @@ section {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.tools {
+  border: 2px solid black;
+  width: 8%;
+  padding: 5px;
+}
+.nadpis__denik {
+  text-align: center;
+}
+.notes {
+  padding: 0;
+}
+
+.zapis {
+  padding-left: 30px;
+}
+#zapisek {
+  background-image: url('img/kniha.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
