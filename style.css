@@ -8,29 +8,25 @@
   box-sizing: inherit;
 }
 
-/*vilena*/
+/*hlavni stranka*/
 
 body {
   color: #272526;
-  background-color: #d0f0e0;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   margin: 0;
+	background-color: whitesmoke;
 }
 
-.foto-vili,
-.foto-zuzana {
-  width: 200px;
-  border-radius: 10%;
-  float: left;
-  margin: 0 30px 30px 0;
-}
-
-.vili,
-.zuzana {
-  padding: 30px 10%;
-  overflow: auto;
-  margin: 10px auto;
+header {
+	background-color: whitesmoke;
+	color: #616e68;
+	font-family: 'Playfair Display', serif;
+	font-weight: bold;
+	font-size: 24px;
+	overflow: auto;
+	padding: 50px 15%;
+	margin: 0 5%;
 }
 
 .menu li {
@@ -41,20 +37,22 @@ body {
   margin: 0px;
   padding: 0px;
   text-align: right;
-  background-color: #8ac9a9;
+	font-family: 'Playfair Display', serif;
+  background-color: #9eb8ab; 
 }
 
 .menu a {
-  color: white;
+  color: #616e68;
   text-decoration: none;
-  padding: 20px 30px;
+	padding: 10px 20px;
   display: inline-block;
+	font-weight: bold;
 }
 
 .menu a:hover,
 .menu a:focus,
-menu a:active {
-  background-color: #9deec5;
+.menu a:active {
+  background-color: #bcdfce;
 }
 
 a {
@@ -62,28 +60,151 @@ a {
   color: #756158;
 }
 
-/*projekt*/
-
-h2 {
-  font-size: 30px;
-  font-family: 'Playfair Display', serif;
-  text-align: center;
-  color: whitesmoke;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
-}
-
-.hlavicka {
-  background-image: url(img/coffee.jpg);
-  padding: 100px 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 section {
-  padding: 30px 15%;
+	padding: 40px 15%;
   overflow: auto;
   text-align: justify;
+	background-color: #bdd4c9;
+}
+
+.projekt {
+  display: flex;
+}
+
+.projekt img {
+	width: 50%;
+	border-radius: 5px;
+}
+ 
+.popis-projekt {
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	font-family: 'Dancing Script';
+}
+
+.footer {
+	padding: 50px 15%;
+	background-color: whitesmoke;
+}
+
+.planovac {
+  background: url("img/pottery.jpg");
+  background-size:cover;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  /*vyresetování odsazení stránky*/
+  margin: 0;
+}
+
+
+/*To-do list*/
+
+/* Remove margins and padding from the list */
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #df9f9a;
+  color: white;
+}
+
+/* Style the header */
+.aktivity {
+  background-color: #df9f9a;
+  padding: 30px;
+  color: white;
+  text-align: center;
+  margin-top:10px;
+}
+
+/* Clear floats after the header */
+.aktivity:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
 }
 
 /* Denik */
