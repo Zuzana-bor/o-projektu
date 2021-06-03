@@ -1,24 +1,19 @@
 * {
   box-sizing: border-box;
 }
-
 *,
 ::before,
 ::after {
   box-sizing: inherit;
 }
-
 /*hlavni stranka*/
-
 body {
   color: #272526;
   font-size: 18px;
-  font-size: 20px;
   line-height: 1.5;
   margin: 0;
   background-color: whitesmoke;
 }
-
 header {
   background-color: whitesmoke;
   color: #616e68;
@@ -29,50 +24,41 @@ header {
   padding: 50px 15%;
   margin: 0 5%;
 }
-
 .menu li {
   display: inline-block;
 }
-
-.menu li {
-  display: inline-block;
-}
-
 .menu {
   margin: 0px;
   padding: 0px;
   text-align: right;
-  background-color: #8ac9a9;
+  font-family: "Playfair Display", serif;
+  background-color: #9eb8ab;
 }
-
 .menu a {
-  color: white;
+  color: #616e68;
   text-decoration: none;
-  padding: 20px 30px;
+  padding: 10px 20px;
   display: inline-block;
+  font-weight: bold;
 }
-
 .menu a:hover,
 .menu a:focus,
-menu a:active {
-  background-color: #9deec5;
+.menu a:active {
+  background-color: #bcdfce;
 }
-
 a {
   font-size: 20px;
   color: #756158;
 }
-
-/*projekt*/
-
-h2 {
-  font-size: 30px;
-  font-family: "Playfair Display", serif;
-  text-align: center;
-  color: whitesmoke;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+section {
+  padding: 40px 15%;
+  overflow: auto;
+  text-align: justify;
+  background-color: #bdd4c9;
 }
-
+.projekt {
+  display: flex;
+}
 .projekt img {
   width: 50%;
   border-radius: 5px;
@@ -84,84 +70,74 @@ h2 {
   flex-direction: column;
   justify-content: center;
   font-family: "Dancing Script";
-  text-align: justify;
 }
-
-/* Denik */
-.conteiner {
-  display: flex;
+.footer {
+  padding: 50px 15%;
+  background-color: whitesmoke;
   text-align: center;
 }
-.histories {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid black;
-  width: 30%;
-  padding: 5px;
-  height: 100%, auto;
+
+.planovac {
+  background: url("img/pottery.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  /*vyresetování odsazení stránky*/
   margin: 0;
 }
-
-.history {
-  display: flex;
-  justify-content: space-between;
-  border: 2px solid black;
-
-  padding: 3px;
+/*To-do list*/
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
 }
-
-#date {
-  border: 2px solid black;
-  border-radius: 45%;
-  background-color: lightgreen;
-  padding: 5px;
-  font-size: 20px;
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
 }
-
-#name {
-  /* flex-shrink: 0; */
-  margin-right: 50px;
-  flex-shrink: 0;
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
 }
-
-.tools {
-  border: 2px solid black;
-  width: 8%;
-  height: 100%, auto;
-  padding: 5px;
+/* Darker background-color on hover */
+ul li:hover {
   background: #ddd;
 }
-.nadpis__denik {
-  text-align: center;
-}
-.notes {
-  padding: 0;
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
   text-decoration: line-through;
 }
-
-.zapis {
-  padding-left: 30px;
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
 }
-#zapisek {
-  background-image: url("img/kniha.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-  background-position: center;
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
 }
-.date_note {
-  margin: 30px;
-}
-
-#submit {
-  margin: 30px;
-}
-
 .close:hover {
   background-color: #df9f9a;
   color: white;
 }
-
 /* Style the header */
 .aktivity {
   background-color: #df9f9a;
@@ -170,14 +146,12 @@ h2 {
   text-align: center;
   margin-top: 10px;
 }
-
 /* Clear floats after the header */
 .aktivity:after {
   content: "";
   display: table;
   clear: both;
 }
-
 /* Style the input */
 input {
   margin: 0;
@@ -188,13 +162,192 @@ input {
   float: left;
   font-size: 16px;
 }
-
 /* Style the "Add" button */
 .addBtn {
   padding: 10px;
   width: 25%;
   background: #d9d9d9;
-  color: #555;
+  col* {
+    box-sizing: border-box;
+  }
+  *,
+  ::before,
+  ::after {
+    box-sizing: inherit;
+  }
+  /*hlavni stranka*/
+  body {
+    color: #272526;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    background-color: whitesmoke;
+  }
+  header {
+    background-color: whitesmoke;
+    color: #616e68;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 24px;
+    overflow: auto;
+    padding: 50px 15%;
+    margin: 0 5%;
+  }
+  .menu li {
+    display: inline-block;
+  }
+  .menu {
+    margin: 0px;
+    padding: 0px;
+    text-align: right;
+    font-family: "Playfair Display", serif;
+    background-color: #9eb8ab;
+  }
+  .menu a {
+    color: #616e68;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-weight: bold;
+  }
+  .menu a:hover,
+  .menu a:focus,
+  .menu a:active {
+    background-color: #bcdfce;
+  }
+  a {
+    font-size: 20px;
+    color: #756158;
+  }
+  section {
+    padding: 40px 15%;
+    overflow: auto;
+    text-align: justify;
+    background-color: #bdd4c9;
+  }
+  .projekt {
+    display: flex;
+  }
+  .projekt img {
+    width: 50%;
+    border-radius: 5px;
+  }
+
+  .popis-projekt {
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Dancing Script";
+  }
+  .footer {
+    padding: 50px 15%;
+    background-color: whitesmoke;
+    text-align: center;
+  }
+
+  .planovac {
+    background: url("img/pottery.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /*vyresetování odsazení stránky*/
+    margin: 0;
+  }
+  /*To-do list*/
+  /* Remove margins and padding from the list */
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  /* Style the list items */
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+  }
+  /* Set all odd list items to a different color (zebra-stripes) */
+  ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #ddd;
+  }
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: "";
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  /* Style the close button */
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  .close:hover {
+    background-color: #df9f9a;
+    color: white;
+  }
+  /* Style the header */
+  .aktivity {
+    background-color: #df9f9a;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+  }
+  /* Clear floats after the header */
+  .aktivity:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* Style the input */
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+  /* Style the "Add" button */
+  .addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+  .addBtn:hover {
+    background-color: #bbb;
+  }
+  or: #555;
   float: left;
   text-align: center;
   font-size: 16px;
@@ -202,11 +355,9 @@ input {
   transition: 0.3s;
   border-radius: 0;
 }
-
 .addBtn:hover {
   background-color: #bbb;
 }
-
 /* Denik */
 .conteiner {
   display: flex;
@@ -218,16 +369,13 @@ input {
   width: 30%;
   padding: 5px;
 }
-
 .history {
   display: flex;
   justify-content: space-between;
   border: 2px solid black;
   align-items: start;
-
   position: relative;
 }
-
 #date {
   border: 2px solid black;
   border-radius: 45%;
@@ -235,18 +383,15 @@ input {
   padding: 5px;
   font-size: 20px;
 }
-
 #name {
   /* flex-shrink: 0; */
   margin-right: 50px;
 }
-
 #photo {
   position: absolute;
   right: 0;
   top: 0;
 }
-
 .tools {
   border: 2px solid black;
   width: 8%;
@@ -258,11 +403,11 @@ input {
 .notes {
   padding: 0;
 }
-
 .zapis {
   padding-left: 30px;
 }
 #zapisek {
   background-image: url("img/kniha.png");
   background-size: contain;
+  background-repeat: no-repeat;
 }
